@@ -160,6 +160,7 @@ class PaymentElementState extends State<PaymentElement> {
   void onCardChanged(js.PaymentElementChangeEvent response) {
     final details = CardFieldInputDetails(
       complete: response.complete,
+      brand: response.value?.type
     );
     widget.onCardChanged(details);
 
